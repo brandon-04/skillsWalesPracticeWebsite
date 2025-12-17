@@ -32,7 +32,8 @@ body {
     top: 0;
 
     width: 100%;
-    background-color: var(--dark-bg);
+    /* background-color: var(--dark-bg); */
+    backdrop-filter: blur(10px);;
     opacity: 88%;
 }
 
@@ -65,6 +66,7 @@ ul#navList li{
 
 #logo {
     max-height: 80px;
+    padding-left: 90px;
     padding-right: 90px;
 }
 
@@ -128,7 +130,7 @@ ul#navList li{
     width: 100vw;
 
     background-color: var(--dark-bg);
-    background: linear-gradient(20deg,rgba(255, 30, 0, 1) 0%, rgba(35, 18, 16, 1) 53%, rgba(17, 17, 17, 1) 100%);
+    background: linear-gradient(15deg,var(--main-color) 0%, rgba(35, 18, 16, 1) 45%, var(--dark-bg) 80%);
     
     padding: 0px;
     margin: 0px;
@@ -136,9 +138,10 @@ ul#navList li{
 
 #aboutContainer {
     display: flex;
+    align-items: center;
 
     height: 75%;
-    width: 75%;
+    width: 90%;
 
     background-image: url("/img/lotus_f1.png");
     background-repeat: no-repeat;
@@ -149,15 +152,15 @@ ul#navList li{
 #aboutTextContainer {
     display: flex;
     justify-content: center;
-    align-content: space-around;
+    align-content: space-evenly;
 
     flex-wrap: wrap;
 
     text-align: center;
     overflow: scroll;
 
-    height: 80%;
-    width: 40%;
+    height: fit-content;
+    width: 30%;
 }
 
 #aboutTextTitle {
@@ -166,11 +169,11 @@ ul#navList li{
     letter-spacing: 6px;
 
     padding: 0px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0px;
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #aboutTextBody {
     font-size: 1rem;
@@ -178,6 +181,8 @@ ul#navList li{
 
     margin: 0px;
     padding: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -186,12 +191,87 @@ ul#navList li{
     height: 50px;
     width: 50px;
 
+    margin-left: 20px;
+    margin-right: 20px;
+
     border-radius: 25px;
-    border: thin white solid;
+    border: thin var(--variation) solid;
+}
+.socialLink:hover {
+    background-color: var(--variation);
+}
+
+#instagram {
+    background-image: url("/img/icons/instagram_icon.svg");
+    background-size: contain;
+}
+#facebook {
+    background-image:  url("/img/icons/facebook_icon.svg");
+    background-size: contain;
+}
+#discord {
+    background-image:  url("/img/icons/discord_icon.svg");
+    background-size: contain;
+}
+
+#portfolio{
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+    gap: 10px;
+    
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--dark-bg);
+    background: linear-gradient(165deg,var(--main-color) 0%, rgba(35, 18, 16, 1) 45%, var(--dark-bg) 80%);
+    
+    padding: 0px;
+    margin: 0px;
+}
+#portfolioTitle {
+    font-size: 60px;
+    color: white;
+    letter-spacing: 6px;
+
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#portfolioContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    overflow-y: scroll;
+
+    height: 75%;
+    width: 90%;
+}
+
+.portfolioImages {
+    height: 300px;
+    margin: 5px;
+    border-radius: 5px;
 }
 
 
-#portfolio, #contact {
+
+
+
+
+
+#contact {
     display: flex;
     justify-content: center;
 
@@ -203,7 +283,7 @@ ul#navList li{
     width: 100vw;
 
     background-color: var(--dark-bg);
-    
+   
     padding: 0px;
     margin: 0px;
 }
