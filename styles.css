@@ -198,7 +198,9 @@ ul#navList li{
     border: thin var(--variation) solid;
 }
 .socialLink:hover {
+    filter:invert(1);
     background-color: var(--variation);
+    
 }
 
 #instagram {
@@ -259,17 +261,54 @@ ul#navList li{
     width: 90%;
 }
 
-.portfolioImages {
+.f4,.f3,.f1,.driver {
     height: 300px;
     margin: 5px;
     border-radius: 5px;
 }
 
+.f4:hover, .f3:hover, .f1:hover, .driver:hover {
+    filter: drop-shadow(0 0 0.2rem white);
+}
+
+.hidden {
+    display: none;
+}
+
+ul#portfolioButtons li{
+    display: inline;
+    list-style-type: none;
+
+    color:white;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    
+    
+}
+
+.button:visited, .button, .button:link{
+    background-color: none;
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-family: var(--default-font);
+    font-size: 18px;
+}
+
+.button:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid RGBA(255, 255, 255, 0.3);
+    cursor: pointer;
 
 
+}
 
-
-
+.button:active {
+    color: white;
+    border-bottom: thin solid var(--main-color);
+}
 
 #contact {
     display: flex;
