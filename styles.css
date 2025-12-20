@@ -327,7 +327,7 @@ ul#portfolioButtons li{
 
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(185deg,rgba(17, 17, 17, 1) 47%, rgba(3, 20, 166, 1) 100%);
+    background: linear-gradient(185deg,rgba(17, 17, 17, 1) 47%, rgba(3, 20, 166, 1) 80%);
 
     padding: 0px;
     margin: 0px;
@@ -335,12 +335,14 @@ ul#portfolioButtons li{
 
 #formContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: space-around;
     flex-wrap: wrap;
-    height: 65%;
+    align-items: center;
+    margin-right: 80px;
+    height: 75%;
     width: 25%;
+    margin-bottom: 90px;
+    overflow-y: scroll;
 }
 #imageContainer {
     display: flex;
@@ -350,6 +352,7 @@ ul#portfolioButtons li{
     background-position: center bottom;
     background-size: 100% auto;
     background-repeat: no-repeat;
+
 }
 
 .inputBox {
@@ -362,16 +365,16 @@ ul#portfolioButtons li{
 }
 #nameForm, #emailForm {
     height: 30px;
-    width: 500px;
-    margin-left: 30px;
-    margin-right: 30px;
-
+    width: 90%;
+    padding: 10px;
     border-radius: 12px;
 }
 #descriptionForm {
+    resize: none;
     text-align: top;
-    height: 300px;
-    width: 500px;
+    padding:10px;
+    height: 140px;
+    width: 90%;
     border-radius: 12px;
 }
 
@@ -392,3 +395,56 @@ ul#portfolioButtons li{
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+#formTitle {
+    font-size: 60px;
+    color: white;
+    letter-spacing: 6px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;   
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 35vh;
+    border-top: medium black solid;
+
+    background-color: rgba(3, 20, 166, 1);
+    overflow-x: hidden;
+}
+
+@keyframes scrollingText {
+    to {
+        transform: translateX(100%);
+    }
+    
+}
+.scrollingDiv {
+    display: flex;
+    flex-wrap: nowrap;
+
+    box-sizing: border-box;
+    
+    border: thin white solid;
+    width: fit-content;
+    height: 100px;
+    position: relative;
+
+    color:white;
+    font-size: 20px;
+    letter-spacing: 7px;
+    text-align: center;
+
+    
+    
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    
+    animation-name: scrollingText;
+    animation-timing-function: linear;
+    animation-duration: 25xs;
+    animation-iteration-count: infinite;
+}
+
